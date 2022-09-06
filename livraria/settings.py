@@ -69,7 +69,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissions',
     ]
 }
-# Database
+#Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
