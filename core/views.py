@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+# from rest_framework.permissions import IsAuthenticated
 
 from core.models import Categoria, Editora, Livro
 from core.serializers import (
@@ -11,6 +12,7 @@ from core.serializers import (
 
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
+    # permission_classes = [IsAuthenticated]
     serializer_class = CategoriaSerializer
 
 
