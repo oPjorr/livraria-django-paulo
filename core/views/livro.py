@@ -5,4 +5,8 @@ from core.serializers import LivroSerializer, LivroDetailSerializer
 
 class LivroViewSet(ModelViewSet):
     queryset = Livro.objects.all()
-    serializer_class = LivroSerializer()
+    
+    def get_serializer_class(self):
+        if self.action in ["list", "retrieve"]:
+            return LivroDetailSerializer
+        return LivroSerializer
