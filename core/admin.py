@@ -1,8 +1,9 @@
 from django.contrib import admin
-
-from core.models import Autor, Categoria, Editora, Livro, Usuario
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
+
+from core.models import Autor, Categoria, Editora, Livro, Usuario
+
 
 class UsuarioAdmin(UserAdmin):
     fieldsets = (
